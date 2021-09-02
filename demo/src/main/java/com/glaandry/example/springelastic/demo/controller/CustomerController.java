@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("api/v1/")
+@RestController
+@RequestMapping("api/v1/")
 public class CustomerController {
 
     @Autowired
@@ -24,8 +25,8 @@ public class CustomerController {
         return customerRepository.findAll();
     }
 
-    @GetMapping("/findByFName/{firstName}")
-    public List<Customer> findByFirstName(@PathVariable String firstName) {
-        return customerRepository.findByFirstname(firstName);
-    }
+    //@GetMapping("/findByFName/{firstName}")
+    //public List<Customer> findByFirstName(@PathVariable String firstName) {
+    //    return customerRepository.findByFirstname(firstName);
+    //}
 }

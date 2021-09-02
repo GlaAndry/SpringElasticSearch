@@ -14,7 +14,8 @@ public class Customer {
 
     @Id
     private String id;
-    private String nome, cognome;
+    private String nome;
+    private String cognome;
     private int age;
 
 }
