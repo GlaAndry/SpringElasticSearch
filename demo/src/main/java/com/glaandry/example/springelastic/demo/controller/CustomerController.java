@@ -25,8 +25,8 @@ public class CustomerController {
         return customerRepository.findAll();
     }
 
-    //@GetMapping("/findByFName/{firstName}")
-    //public List<Customer> findByFirstName(@PathVariable String firstName) {
-    //    return customerRepository.findByFirstname(firstName);
-    //}
+    @GetMapping("/findByFName/{firstName}")
+    public List<Customer> findByFirstName(@PathVariable String firstName) {
+        return customerRepository.findByNome(firstName);
+    }
 }
